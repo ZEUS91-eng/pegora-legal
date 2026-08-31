@@ -1,0 +1,164 @@
+/* The Zeus Labs — legal pages
+   Palette is the Okabe-Ito colour-blind-safe set, the same one Pegora uses in-game. */
+
+:root {
+  --ink:        #1a1a1a;
+  --ink-soft:   #55565a;
+  --rule:       #e2e2df;
+  --paper:      #ffffff;
+  --shell:      #f6f5f2;
+  --link:       #0072b2;
+
+  --peg-1: #e69f00;
+  --peg-2: #56b4e9;
+  --peg-3: #009e73;
+  --peg-4: #d55e00;
+  --peg-5: #0072b2;
+  --peg-6: #cc79a7;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--shell);
+  color: var(--ink);
+  font: 400 1.0625rem/1.7 Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+
+.sheet {
+  max-width: 44rem;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 3.5rem 2.25rem 4rem;
+  min-height: 100vh;
+}
+
+/* --- masthead ------------------------------------------------- */
+
+.pegs {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1.75rem;
+}
+.pegs span {
+  width: .875rem;
+  height: .875rem;
+  border-radius: 50%;
+  display: block;
+}
+.pegs span:nth-child(1) { background: var(--peg-1); }
+.pegs span:nth-child(2) { background: var(--peg-2); }
+.pegs span:nth-child(3) { background: var(--peg-3); }
+.pegs span:nth-child(4) { background: var(--peg-4); }
+.pegs span:nth-child(5) { background: var(--peg-5); }
+.pegs span:nth-child(6) { background: var(--peg-6); }
+
+.brand {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .9375rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+.brand:hover { color: var(--link); }
+
+h1 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 2.125rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  margin: 0 0 .5rem;
+}
+
+.meta {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .875rem;
+  color: var(--ink-soft);
+  margin: 0 0 2.75rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* --- body ----------------------------------------------------- */
+
+h2 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  margin: 3rem 0 .75rem;
+}
+
+h3 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 650;
+  margin: 2rem 0 .5rem;
+}
+
+p, li { margin: 0 0 1.1rem; }
+
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .6rem; }
+
+a { color: var(--link); }
+a:focus-visible,
+.brand:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+strong { font-weight: 700; }
+
+.callout {
+  background: var(--shell);
+  border-left: 3px solid var(--peg-3);
+  padding: 1.1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* --- index page cards ----------------------------------------- */
+
+.apps { margin-top: 2.5rem; }
+
+.app {
+  border-top: 1px solid var(--rule);
+  padding: 1.75rem 0;
+}
+.app:last-child { border-bottom: 1px solid var(--rule); }
+
+.app h2 { margin: 0 0 .4rem; font-size: 1.375rem; }
+.app p  { margin: 0 0 .9rem; color: var(--ink-soft); font-size: .9375rem; }
+
+.app-links {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .9375rem;
+}
+.app-links a { margin-right: 1.5rem; }
+
+/* --- footer --------------------------------------------------- */
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .875rem;
+  color: var(--ink-soft);
+}
+footer p { margin: 0 0 .4rem; }
+
+@media (max-width: 34rem) {
+  .sheet { padding: 2.5rem 1.375rem 3rem; }
+  h1 { font-size: 1.75rem; }
+  body { font-size: 1rem; }
+}
